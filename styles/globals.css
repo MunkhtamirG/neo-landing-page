@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("../public/stars.jpg");
+  background-size: cover;
+}
+.navbar {
+  box-shadow: 0 0px 5px #21cda8, 0 1px 10px #21cda8, 0 2px 15px #21cda8,
+    0 3px 20px #21cda8;
+}
+.button {
+  box-shadow: 0 0px 10px #21cda8;
+}
+.neon-text:hover {
+  text-shadow: 0px 0px 5px #21cda8, 0px 0px 10px #21cda8;
+}
+.neon-text {
+  text-shadow: 0px 0px 5px #21cda8;
+}
+.neon-text:hover::before {
+  content: "";
+  height: 4px;
+  background: #21cda8;
+  position: absolute;
+  width: 180%;
+  left: 0;
+  transform: translateY(47px) translateX(-15px);
+}
+.main {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  left: 36%;
+  top: 20%;
+  border: 1px solid #21cda8;
+  box-shadow: 0px 0px 15px #21cda8, 0px 0px 20px #21cda8, 0px 0px 25px #21cda8,
+    0px 0px 150px #21cda8;
+  z-index: -1;
+}
+.bg-layer {
+  background: radial-gradient(#21cda8 -70%, #000);
+  z-index: -1;
+  mix-blend-mode: hard-light;
+}
+.bg-slog {
+  background: rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 0 5px #21cda8; */
+  border-right: 4px solid #21cda8;
+  text-shadow: 0px 0px 7px #21cda8;
+}
