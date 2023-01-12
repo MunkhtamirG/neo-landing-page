@@ -40,8 +40,11 @@ export default function Index() {
     },
   };
 
+  console.log(swiper);
+
   return (
     <div className="h-screen">
+      {/* <div className="text-white absolute">{swiper?.realIndex + 1}/2</div> */}
       <div className="w-full text-white flex justify-between items-center">
         <div>
           <button
@@ -87,16 +90,15 @@ export default function Index() {
       <motion.div
         variants={variants}
         animate="default"
-        transition={{ delay: 0, duration: 0 }}
         className="w-10 h-10 border-[2px] rounded-full border-[#21CDA8] fixed top-0 left-0 navbar z-[-1]"
       ></motion.div>
 
-      {swiper?.activeIndex === 1 ? (
+      {swiper?.realIndex == 0 ? (
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: 300 }}
           transition={{ ease: "easeIn" }}
-          className="text-[#21CDA8] font-[Rajdhani] font-medium text-[24px] -translate-y-40 bg-[rgba(250,250,250,0.2)] w-[300px] p-4 text-end border-r-4 border-[#21CDA8]"
+          className="text-[#21CDA8] font-[Rajdhani] font-medium text-[24px] -translate-y-40 bg-[rgba(250,250,250,0.2)] w-[300px] p-4 text-end border-r-4 border-[#21CDA8] neon-text"
         >
           <motion.p
             initial={{ opacity: 0, fontSize: 0 }}
@@ -112,7 +114,7 @@ export default function Index() {
           animate={{ width: 300 }}
           exit={{ width: 0 }}
           transition={{ ease: "easeIn" }}
-          className="text-[#21CDA8] font-[Rajdhani] font-medium text-[24px] -translate-y-40 bg-[rgba(250,250,250,0.2)] w-[300px] p-4 text-end border-r-4 border-[#21CDA8]"
+          className="text-[#21CDA8] font-[Rajdhani] font-medium text-[24px] -translate-y-40 bg-[rgba(250,250,250,0.2)] w-[300px] p-4 text-end border-r-4 border-[#21CDA8] neon-text"
         >
           <motion.p
             initial={{ opacity: 0, fontSize: 0 }}
@@ -123,6 +125,12 @@ export default function Index() {
           </motion.p>
         </motion.div>
       )}
+      <div className="absolute text-[#21CDA8] font-[Rajdhani] top-[15vh] text-[60px] font-semibold neon-text">
+        <p>
+          {swiper?.realIndex + 1}
+          <span className="text-[24px]">/2</span>
+        </p>
+      </div>
     </div>
   );
 }
