@@ -12,18 +12,10 @@ export default function Navbar() {
   });
   return (
     <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <div
         data-aos="fade-down"
         data-aos-delay="200"
-        className="fixed max-w-[1280px] w-full font-[Rajdhani] text-xl"
+        className="fixed max-w-[1280px] w-full font-[Rajdhani] text-lg"
       >
         <div className="py-4 px-2 flex text-[#21CDA8] uppercase font-semibold justify-between items-center">
           <ul className="flex justify-between w-[70%]">
@@ -43,7 +35,7 @@ export default function Navbar() {
               <a href="/">contacts</a>
             </li>
           </ul>
-          <button className="uppercase bg-[#21CDA8] text-white p-2 rounded-lg button">
+          <button className="uppercase text-lg bg-[#21CDA8] text-white px-2 rounded-lg button">
             register now
           </button>
         </div>
