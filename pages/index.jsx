@@ -7,7 +7,11 @@ import { Navigation } from "swiper";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
-import { RightOutlined, LeftOutlined } from "@ant-design/icons";
+import {
+  RightOutlined,
+  LeftOutlined,
+  RadarChartOutlined,
+} from "@ant-design/icons";
 
 export default function Index() {
   const [swiper, setSwiper] = useState();
@@ -70,7 +74,7 @@ export default function Index() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-full h-[90vh]">
+            <div className="w-full h-[90vh] pt-60">
               <Spline scene="https://prod.spline.design/4eVq1f51MTf6glI5/scene.splinecode" />
             </div>
           </SwiperSlide>
@@ -90,8 +94,10 @@ export default function Index() {
       <motion.div
         variants={variants}
         animate="default"
-        className="w-10 h-10 border-[2px] rounded-full border-[#21CDA8] fixed top-0 left-0 navbar z-[-1]"
-      ></motion.div>
+        className="text-[32px] text-[#21CDA8] fixed top-0 left-0 z-[-1]"
+      >
+        <RadarChartOutlined />
+      </motion.div>
 
       {swiper?.realIndex == 0 ? (
         <motion.div
@@ -125,10 +131,10 @@ export default function Index() {
           </motion.p>
         </motion.div>
       )}
-      <div className="absolute text-[#21CDA8] font-[Rajdhani] top-[15vh] text-[60px] font-semibold neon-text">
+      <div className="absolute text-[#21CDA8] font-[Rajdhani] top-[15vh] text-[96px] neon-text">
         <p>
-          {swiper?.realIndex + 1}
-          <span className="text-[24px]">/2</span>
+          0{swiper?.realIndex + 1}
+          <span className="text-[48px]">/2</span>
         </p>
       </div>
     </div>
